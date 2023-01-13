@@ -10,7 +10,7 @@ WRITE_CSV <- TRUE
 
 # details for the specific dataset being processed ------------------------
 
-# ONS source zip
+# ONS source zip - dowloaded from https://geoportal.statistics.gov.uk/datasets/ons-postcode-directory-may-2022-1/about
 ONSPD <- 'ONSPD_MAY_2022_UK'
 
 # reference data - check this every time

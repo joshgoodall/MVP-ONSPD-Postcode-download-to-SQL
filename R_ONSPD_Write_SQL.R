@@ -6,6 +6,8 @@ library(glue)
 
 # get SQL connection ----------------------------------------------------------
 
+# testing this by loading into the KCOM SQL database
+# ultimately - replace this to write to Michael Jeffrey's Postgres database
 DBI_Connection <- dbConnect(odbc(),
                             driver = "SQL Server",
                             server = Sys.getenv("KCOM-SVR"),
