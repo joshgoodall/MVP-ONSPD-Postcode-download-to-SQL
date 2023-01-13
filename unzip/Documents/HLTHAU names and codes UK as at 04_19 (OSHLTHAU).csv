@@ -1,0 +1,37 @@
+﻿HLTHAUCD,HLTHAUCDO,HLTHAUNM,HLTHAUNMW
+E18000001,Q30,North East,
+E18000002,Q31,North West,
+E18000003,Q32,Yorkshire and the Humber,
+E18000004,Q33,East Midlands,
+E18000005,Q34,West Midlands,
+E18000006,Q35,East of England,
+E18000007,Q36,London,
+E18000008,Q37,South East Coast,
+E18000009,Q38,South Central,
+E18000010,Q39,South West,
+W11000023,7A1,Betsi Cadwaladr University Health Board,Bwrdd Iechyd Prifysgol Betsi Cadwaladr
+W11000024,7A7,Powys Teaching Health Board,Bwrdd Iechyd Addysgu Powys
+W11000025,7A2,Hywel Dda University Health Board,Bwrdd Iechyd Prifysgol Hywel Dda
+W11000028,7A6,Aneurin Bevan University Health Board,Bwrdd Iechyd Prifysgol Aneurin Bevan
+W11000029,7A4,Cardiff and Vale University Health Board,Bwrdd Iechyd Prifysgol Caerdydd a’r Fro
+W11000030,7A5,Cwm Taf Morgannwg University Health Board,Bwrdd Iechyd Prifysgol Cwm Taf Morgannwg
+W11000031,7A3,Swansea Bay University Health Board,Bwrdd Iechyd Prifysgol Bae Abertawe
+S08000015,SA9,Ayrshire and Arran,
+S08000016,SB9,Borders,
+S08000017,SY9,Dumfries and Galloway,
+S08000019,SV9,Forth Valley,
+S08000020,SN9,Grampian,
+S08000022,SH9,Highland,
+S08000024,SS9,Lothian,
+S08000025,SR9,Orkney,
+S08000026,SZ9,Shetland,
+S08000028,SW9,Western Isles,
+S08000029,SF9,Fife,
+S08000030,ST9,Tayside,
+S08000031,SG9,Greater Glasgow and Clyde,
+S08000032,SL9,Lanarkshire,
+ZB001,ZB001,Health & Social Care Board,
+L00000001,,Jersey Health Authority,
+L00000002,,Guernsey Health Authority,
+L00000003,,Sark Health Authority,
+M00000001,,Isle of Man,
