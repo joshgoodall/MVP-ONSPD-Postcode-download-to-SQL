@@ -2,7 +2,7 @@
 
 ## Background
 
-Michael Jeffrey maintains a Postgress Database-as-a-Service with postcode data from ONS Postcode Directory (ONSPD) - https://www.ons.gov.uk/methodology/geography/geographicalproducts/postcodeproducts - postcode products are supplied by the ONS quarterly in February, May, August and November each year and they are available to download, free of charge, from the Open Geography portal.
+Michael Jeffrey maintains a Postgress Database-as-a-Service with postcode data from ONS Postcode Directory (ONSPD) - https://www.ons.gov.uk/methodology/geography/geographicalproducts/postcodeproducts - postcode products are supplied by the ONS quarterly in February, May, August and November each year and they are available to download, free of charge, from the Open Geography portal https://geoportal.statistics.gov.uk/.
 
 The download is supplied as a .zip file containing Data, Reference Documentation and a User Guide. Data is supplied in various formats and accumulations, CSV, xlsx, by individual postcode region (eg SW, KT) or in total. 
 
