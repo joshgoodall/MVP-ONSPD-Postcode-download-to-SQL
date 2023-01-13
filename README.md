@@ -12,4 +12,4 @@ Consistency of format and naming conventions cannot be assumed from release to r
 
 *R_ONSPD_Extract_Zip.R* - We need to first extract the required files from the zip, specifically Documentation, User Guide and a sample of postcode region CSVs. Then we reformats this data into multiple heirarchical dataframes as per the schema we want to use for the Postgres data
 
-*R_ONSPD_Write_SQL* - We need to load the outputs from the first step into a SQL database - for this MVP we're using the local SQL database on 172.17.20.9, but once we're happy we'll replace this with the connection to Michaels Postgres database.
+*R_ONSPD_Write_SQL.R* - We need to load the outputs from the first step into a SQL database - for this MVP we're using the local SQL database on 172.17.20.9, but once we're happy we'll replace this with the connection to Michaels Postgres database.
