@@ -1,0 +1,27 @@
+#Import the file and set up the pyarrow engine to read the parquet file, this can be changed to read csv
+import pandas as pd
+import numpy as np
+data = pd.read_parquet('/content/drive/MyDrive/geo_data_postcodes_test.parquet', engine = 'pyarrow')
+#data = pd.read_csv('filenamehere.csv')
+df = pd.DataFrame(data)
+
+#replace filed that's empty with NaN
+df2 = df.replace(r'^\s*$', np.nan, regex=True)
+print (df2)
+
+#Convert columns into float,
+df2[['lat','lon']] = df[['lat','lon']].astype(float)
+
+#Convert columns into Integar, using the pandas package for this as it handles converting NA values
+df2[['easting','northing','positional_quality','imd_rank']] = df[['easting','northing','positional_quality','imd_rank']].astype('Int64')
+
+#Convert columns into datetime format
+df2[['date_start','date_end']] = df[['date_start','date_end']].apply(pd.to_datetime)
+
+#Convert columns into strings
+df2[['postcode','postcode_no_space','postcode_area','state','onspd_version','european_economic_region_code']] = df[['postcode','postcode_no_space','postcode_area']].astype(str)
+print (df2)
+print (df2.dtypes)
+
+#Create output file
+df2.to_parquet('Geo_data_Postcodes_test.parquet')
