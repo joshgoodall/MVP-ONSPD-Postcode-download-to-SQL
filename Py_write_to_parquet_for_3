@@ -1,4 +1,4 @@
-#Import the file and set up the pyarrow engine to read the parquet file, this can be changed to read csv
+#Import the file and set up the pyarrow engine to read the parquet file, this can be change to read csv
 import pandas as pd
 import numpy as np
 data = pd.read_parquet('/content/drive/MyDrive/geo_data_postcodes_test.parquet', engine = 'pyarrow')
@@ -18,10 +18,70 @@ df2[['easting','northing','positional_quality','imd_rank']] = df[['easting','nor
 #Convert columns into datetime format
 df2[['date_start','date_end']] = df[['date_start','date_end']].apply(pd.to_datetime)
 
-#Convert columns into strings
-df2[['postcode','postcode_no_space','postcode_area','state','onspd_version','european_economic_region_code']] = df[['postcode','postcode_no_space','postcode_area']].astype(str)
+#Convert columns into strings, acting as safety net in case anything changes on the ONS side,
+df2[['postcode',
+     'postcode_no_space',
+     'postcode_area',
+     'state',
+     'onspd_version',
+     'european_economic_region_code',
+     'european_economic_region_name',
+     'county_code',
+     'county_name',
+     'local_authority_code',
+     'local_authority_name',
+     'ward_code','ward_name',
+     'county_electoral_division_code',
+     'county_electoral_division_name',
+     'parish_code','parish_name',
+     'parliamentary_constituency_code',
+     'parliamentary_constituency_name','census_output_area_2021_code',
+     'lower_super_output_area_2021_code',
+     'census_output_area_2011_code',
+     'lower_super_output_area_2011_code',
+     'rural_urban_area_2011_code',
+     'primary_care_trust_code',
+     'integrated_care_board_subdivision_code',
+     'integrated_care_board_subdivision_name',
+     'police_force_area_code',
+     'police_force_area_name',
+     'integrated_care_board_code',
+     'integrated_care_board_name',
+     'westminster_member_of_parliment',
+     'westminster_political_party']] = df[['postcode',
+     'postcode_no_space',
+     'postcode_area',
+     'state',
+     'onspd_version',
+     'european_economic_region_code',
+     'european_economic_region_name',
+     'county_code',
+     'county_name',
+     'local_authority_code',
+     'local_authority_name',
+     'ward_code','ward_name',
+     'county_electoral_division_code',
+     'county_electoral_division_name',
+     'parish_code','parish_name',
+     'parliamentary_constituency_code',
+     'parliamentary_constituency_name','census_output_area_2021_code',
+     'lower_super_output_area_2021_code',
+     'census_output_area_2011_code',
+     'lower_super_output_area_2011_code',
+     'rural_urban_area_2011_code',
+     'primary_care_trust_code',
+     'integrated_care_board_subdivision_code',
+     'integrated_care_board_subdivision_name',
+     'police_force_area_code',
+     'police_force_area_name',
+     'integrated_care_board_code',
+     'integrated_care_board_name',
+     'westminster_member_of_parliment',
+     'westminster_political_party']].astype(str)
+
+#Print to check the datatype are correct
 print (df2)
 print (df2.dtypes)
 
 #Create output file
-df2.to_parquet('Geo_data_Postcodes_test.parquet')
+df2.to_parquet('Geo_data_Postcodes_tranformedformat_test_.parquet')
